@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class MegalovaniaNotes {
-    public static final MidiTrack track1 = new MidiTrack(9, List.of(
+    public static final MidiTrack drums = new MidiTrack(9, List.of(
             new MidiNote("G5", 31, 30.00, 0.25),
             new MidiNote("G5", 48, 30.50, 0.25),
             new MidiNote("G5", 65, 31.00, 0.25),
@@ -338,7 +338,7 @@ public class MegalovaniaNotes {
             new MidiNote("E4", 80, 95.50, 0.25)
     ));
 
-    public static final MidiTrack track2 = new MidiTrack(0, List.of(
+    public static final MidiTrack melody = new MidiTrack(0, List.of(
             new MidiNote("D6", 81, 0.00, 0.25),
             new MidiNote("D6", 82, 0.25, 0.25),
             new MidiNote("D7", 82, 0.50, 0.5),
@@ -588,16 +588,7 @@ public class MegalovaniaNotes {
             new MidiNote("C7", 92, 93.75, 2.25)
     ));
 
-    public static final MidiTrack track3 = new MidiTrack(1, List.of(
-//            new MidiNote(CONTROL_CHANGE, "A#1", 51, 0),
-//            new MidiNote(CONTROL_CHANGE, "G1", 100, 0),
-//            new MidiNote(PITCH_BEND, "C1", 64, 0),
-//            new MidiNote(CONTROL_CHANGE, "F9", 0, 0),
-//            new MidiNote(CONTROL_CHANGE, "E9", 0, 0),
-//            new MidiNote(CONTROL_CHANGE, "F#1", 12, 0),
-//            new MidiNote(PROGRAM_CHANGE, "C1", 0, 0),
-//            new MidiNote(CONTROL_CHANGE, "G8", 48, 0),
-//            new MidiNote(CONTROL_CHANGE, "E6", 0, 0),
+    public static final MidiTrack bass = new MidiTrack(1, List.of(
             new MidiNote("D5", 69, 16.00, 0.5),
             new MidiNote("D5", 80, 16.50, 0.5),
             new MidiNote("D5", 76, 17.00, 0.25),

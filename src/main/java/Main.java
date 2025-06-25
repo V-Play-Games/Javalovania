@@ -8,15 +8,17 @@ public class Main {
         synthesizer.open();
         synthesizer.loadAllInstruments(soundfont);
 
-        Sequence newSeq = new Sequence(Sequence.PPQ, 96, 3);
-        MegalovaniaNotes.track1.copyTo(newSeq.getTracks()[0], 96);
-        MegalovaniaNotes.track2.copyTo(newSeq.getTracks()[1], 96);
-        MegalovaniaNotes.track3.copyTo(newSeq.getTracks()[2], 96);
+        Sequence newSeq = new Sequence(Sequence.PPQ, 96);
+        MegalovaniaNotes.drums.copyTo(newSeq);
+        MegalovaniaNotes.melody.copyTo(newSeq);
+        MegalovaniaNotes.bass.copyTo(newSeq);
 
         Sequencer sequencer = MidiSystem.getSequencer(false);
         sequencer.getTransmitter().setReceiver(synthesizer.getReceiver());
         sequencer.open();
         sequencer.setSequence(newSeq);
         sequencer.start();
+        Thread.sleep(50000);
+        System.exit(0);
     }
 }
