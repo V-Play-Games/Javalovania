@@ -3,20 +3,8 @@ import java.util.List;
 public class MegalovaniaNotes {
     public static final int NOTE_OFF = 0x80;  // 128
     public static final int NOTE_ON = 0x90;  // 144
-    public static final int CONTROL_CHANGE = 0xB0;  // 176
-    public static final int PROGRAM_CHANGE = 0xC0;  // 192
-    public static final int PITCH_BEND = 0xE0;  // 224
 
     public static final MidiTrack track1 = new MidiTrack(9, List.of(
-            new MidiNote(CONTROL_CHANGE, "A#1", 64, 0),
-            new MidiNote(CONTROL_CHANGE, "G1", 105, 0),
-            new MidiNote(PITCH_BEND, "C1", 64, 0),
-            new MidiNote(CONTROL_CHANGE, "F9", 0, 0),
-            new MidiNote(CONTROL_CHANGE, "E9", 0, 0),
-            new MidiNote(CONTROL_CHANGE, "F#1", 12, 0),
-            new MidiNote(PROGRAM_CHANGE, "C1", 0, 0),
-            new MidiNote(CONTROL_CHANGE, "G8", 19, 0),
-            new MidiNote(CONTROL_CHANGE, "E6", 0, 0),
             new MidiNote(NOTE_ON, "G5", 31, 30),
             new MidiNote(NOTE_OFF, "G5", 64, 30.25),
             new MidiNote(NOTE_ON, "G5", 48, 30.5),
@@ -692,15 +680,6 @@ public class MegalovaniaNotes {
     ));
 
     public static final MidiTrack track2 = new MidiTrack(0, List.of(
-            new MidiNote(CONTROL_CHANGE, "A#1", 51, 0),
-            new MidiNote(CONTROL_CHANGE, "G1", 100, 0),
-            new MidiNote(PITCH_BEND, "C1", 64, 0),
-            new MidiNote(CONTROL_CHANGE, "F9", 0, 0),
-            new MidiNote(CONTROL_CHANGE, "E9", 0, 0),
-            new MidiNote(CONTROL_CHANGE, "F#1", 12, 0),
-            new MidiNote(PROGRAM_CHANGE, "C1", 0, 0),
-            new MidiNote(CONTROL_CHANGE, "G8", 48, 0),
-            new MidiNote(CONTROL_CHANGE, "E6", 0, 0),
             new MidiNote(NOTE_ON, "D6", 81, 0),
             new MidiNote(NOTE_OFF, "D6", 0, 0.25),
             new MidiNote(NOTE_ON, "D6", 82, 0.25),
@@ -1198,15 +1177,15 @@ public class MegalovaniaNotes {
     ));
 
     public static final MidiTrack track3 = new MidiTrack(1, List.of(
-            new MidiNote(CONTROL_CHANGE, "A#1", 51, 0),
-            new MidiNote(CONTROL_CHANGE, "G1", 100, 0),
-            new MidiNote(PITCH_BEND, "C1", 64, 0),
-            new MidiNote(CONTROL_CHANGE, "F9", 0, 0),
-            new MidiNote(CONTROL_CHANGE, "E9", 0, 0),
-            new MidiNote(CONTROL_CHANGE, "F#1", 12, 0),
-            new MidiNote(PROGRAM_CHANGE, "C1", 0, 0),
-            new MidiNote(CONTROL_CHANGE, "G8", 48, 0),
-            new MidiNote(CONTROL_CHANGE, "E6", 0, 0),
+//            new MidiNote(CONTROL_CHANGE, "A#1", 51, 0),
+//            new MidiNote(CONTROL_CHANGE, "G1", 100, 0),
+//            new MidiNote(PITCH_BEND, "C1", 64, 0),
+//            new MidiNote(CONTROL_CHANGE, "F9", 0, 0),
+//            new MidiNote(CONTROL_CHANGE, "E9", 0, 0),
+//            new MidiNote(CONTROL_CHANGE, "F#1", 12, 0),
+//            new MidiNote(PROGRAM_CHANGE, "C1", 0, 0),
+//            new MidiNote(CONTROL_CHANGE, "G8", 48, 0),
+//            new MidiNote(CONTROL_CHANGE, "E6", 0, 0),
             new MidiNote(NOTE_ON, "D5", 69, 16),
             new MidiNote(NOTE_OFF, "D5", 0, 16.5),
             new MidiNote(NOTE_ON, "D5", 80, 16.5),
