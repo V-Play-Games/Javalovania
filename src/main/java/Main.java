@@ -3,7 +3,7 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Soundbank soundfont = MidiSystem.getSoundbank(new File("Sonic_Pocket_Adventure_Soundfont_Redux.sf2")); // Load your soundfont file
+        Soundbank soundfont = MidiSystem.getSoundbank(new File("Sonic_Pocket_Adventure_Soundfont_Redux.sf2"));
         Synthesizer synthesizer = MidiSystem.getSynthesizer();
         synthesizer.open();
         synthesizer.loadAllInstruments(soundfont);

@@ -4,12 +4,12 @@ import javax.sound.midi.ShortMessage;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public record MidiNote(int note, int velocity, double secPos, double duration) {
+public record MidiNote(int note, int velocity, double secPos, int fourths) {
     public static final int NOTE_OFF = 0x80;  // 128
     public static final int NOTE_ON = 0x90;  // 144
 
-    public MidiNote(String note, int velocity, double secPos, double duration) {
-        this(noteToNumber(note), velocity, secPos, duration);
+    public MidiNote(String note, int velocity, double secPos, int fourths) {
+        this(noteToNumber(note), velocity, secPos, fourths);
     }
 
     public MidiEvent toNoteOnEvent(int channel, int tickRatio) throws InvalidMidiDataException {
@@ -17,7 +17,7 @@ public record MidiNote(int note, int velocity, double secPos, double duration) {
     }
 
     public MidiEvent toNoteOffEvent(int channel, int tickRatio) throws InvalidMidiDataException {
-        return new MidiEvent(new ShortMessage(NOTE_OFF, channel, note, velocity), (long) ((secPos + duration) * tickRatio));
+        return new MidiEvent(new ShortMessage(NOTE_OFF, channel, note, velocity), (long) ((secPos + fourths * 0.25) * tickRatio));
     }
 
     private static final Pattern NOTE_PATTERN = Pattern.compile("([A-G]#?)(\\d)");
@@ -55,6 +55,6 @@ public record MidiNote(int note, int velocity, double secPos, double duration) {
 
     public String toString() {
         return "Note %3s, Velocity %02d, at %02.02f s%n for %02.02fs"
-                .formatted(getNoteName(note), velocity, secPos, duration);
+                .formatted(getNoteName(note), velocity, secPos, fourths * 0.25);
     }
 }
