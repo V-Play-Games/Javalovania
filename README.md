@@ -6,7 +6,10 @@ A MIDI Cover of Megalovania written in Java.
 - Java 21 or higher
 
 ## How to Run
-1. Build the project using your preferred Java build tool (e.g., Maven or directly with `javac`).
+1. Build the project using Maven
+   ```sh
+   mvn build
+   ```
 2. Run the `Main` class:
    
    ```sh
