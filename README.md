@@ -4,6 +4,7 @@ A MIDI Cover of Megalovania written in Java.
 
 ## Requirements
 - Java 21 or higher
+- Maven 3
 
 ## How to Run
 1. Build the project using Maven
